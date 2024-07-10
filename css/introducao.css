@@ -1,11 +1,21 @@
+/* Estilizando a introducao para que a imagem e o texto fiquem lado a lado */
 .introducao {
-  max-width: 1200px;
-  padding: 40px 20px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 100px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.introducao img {
+  max-width: 50%;
+  height: auto;
+  margin-right: 20px;
+}
+
+.introducao div {
+  max-width: 50%;
 }
 
 .introducao h1 {
@@ -19,6 +29,7 @@
   color: darkgray;
 }
 
+/* Ajustes para telas menores */
 @media (max-width: 1000px) {
   .introducao h1 {
     font-size: 3rem;
@@ -27,20 +38,16 @@
 
 @media (max-width: 800px) {
   .introducao {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .introducao img {
+    max-width: 100%;
+    margin-bottom: 20px;
   }
 
   .introducao h1 {
     font-size: 2rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .introducao {
-    grid-template-columns: 1fr;
-  }
-  .introducao img {
-    display: none;
   }
 }
