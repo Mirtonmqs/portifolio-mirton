@@ -14,6 +14,7 @@
 
 .formacao .subtitulo {
   color: #000000;
+  max-width: 5ch;
 }
 
 .formacao-texto {
@@ -114,5 +115,11 @@
   .formacao-container {
     grid-template-columns: 1fr;
     padding: 60px 20px;
+  }
+  .formacao .subtitulo {
+    color: #ffffff;
+  }
+  .formacao-texto {
+    font-size: 1.25rem;
   }
   }
